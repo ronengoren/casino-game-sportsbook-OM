@@ -17,14 +17,9 @@ import ScratchCard from "@/components/ScratchCardGame";
 import GameHeader from "@/components/GameHeader";
 import RouletteWheel from "@/components/RouletteWheelGame";
 import SlotMachineGame from "@/components/SlotMachine";
+import { headerMenuItems, footerMenuItems } from "../constants/menus";
 
-const menuItems = [
-  { label: "Home", route: "/" },
-  { label: "Game Center", route: "/game-center" },
-  { label: "Online Casino", route: "/online-casino" },
-  { label: "Sportsbook", route: "/sportbook" },
-  { label: "My Wallet", route: "/wallet" },
-];
+
 
 const Game = () => {
   const { id, title } = useLocalSearchParams();
@@ -38,7 +33,7 @@ const Game = () => {
       <ScrollView style={{ flex: 1 }}>
         <Header
           logoSource={require("../assets/images/logo-casino-gaming.png")}
-          menuItems={menuItems}
+          menuItems={headerMenuItems}
         />
         <GameHeader title={title} />
         <View style={styles.centeredContainer}>

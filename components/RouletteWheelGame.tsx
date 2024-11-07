@@ -16,6 +16,7 @@ import {
 import LottieView from "lottie-react-native";
 import MultiSelectMenuRoulette from "./MultiSelectMenuRoulette";
 import Footer from "./Footer";
+import { headerMenuItems, footerMenuItems } from "../constants/menus";
 
 const rouletteOptions = {
   bettingOptions: [
@@ -118,13 +119,7 @@ const rouletteOptions = {
     },
   ],
 };
-const footerMenuItems = [
-    { label: "Home", route: "/home" },
-    { label: "Game Center", route: "/game-center" },
-    { label: "Online Casino", route: "/online-casino" },
-    { label: "Sportsbook", route: "/sportbook" },
-    { label: "My Wallet", route: "/wallet" },
-  ];
+
 const RouletteWheel = () => {
   const [isSpinning, setIsSpinning] = useState(false);
   const animationProgress = useRef(0);

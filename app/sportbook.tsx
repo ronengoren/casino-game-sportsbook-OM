@@ -15,6 +15,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import BigBanner from "@/components/BigBanner";
 import { ScrollView } from "react-native-gesture-handler";
+import { headerMenuItems, footerMenuItems } from "../constants/menus";
 
 const SportsBook = () => {
   const [selectedSport, setSelectedSport] = useState("Football");
@@ -23,21 +24,9 @@ const SportsBook = () => {
     { date: "2023-11-05", total: 210, id: 2 },
     // ... more games
   ]);
-  const menuItems = [
-    { label: "Home", route: "/" },
-    { label: "Game Center", route: "/game-center" },
-    { label: "Online Casino", route: "/online-casino" },
-    { label: "Sportsbook", route: "/sportbook" },
-    { label: "My Wallet", route: "/wallet" },
-  ];
 
-  const footerMenuItems = [
-    { label: "Home", route: "/home" },
-    { label: "Game Center", route: "/game-center" },
-    { label: "Online Casino", route: "/online-casino" },
-    { label: "Sportsbook", route: "/sportbook" },
-    { label: "My Wallet", route: "/wallet" },
-  ];
+
+
   const sports = [
     "Football",
     "Basketball",
@@ -62,7 +51,7 @@ const SportsBook = () => {
         <ScrollView>
           <Header
             logoSource={require("../assets/images/logo-casino-gaming.png")}
-            menuItems={menuItems}
+            menuItems={headerMenuItems}
           />
           <View style={styles.container}>
             {/* Left Section */}

@@ -6,24 +6,12 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import BigBanner from '@/components/BigBanner';
 import { ScrollView } from 'react-native-gesture-handler';
+import { headerMenuItems, footerMenuItems } from "../constants/menus";
 
 const GameCenter = () => {
-    const menuItems = [
-        { label: 'Home', route: '/' },
-        { label: 'Game Center', route: '/game-center' },
-        { label: 'Online Casino', route: '/online-casino' },
-        { label: 'Sportsbook', route: '/sportbook' },
-        { label: 'My Wallet', route: '/wallet' },
-    
-      ];
+ 
       
-  const footerMenuItems = [
-    { label: 'Home', route: '/home' },
-    { label: 'Game Center', route: '/game-center' },
-    { label: 'Online Casino', route: '/online-casino' },
-    { label: 'Sportsbook', route: '/sportbook' },
-    { label: 'My Wallet', route: '/wallet' },
-  ];
+
   const images = [
     { uri: '../assets/images/baccarat.png', onPress: () => console.log('Image 1 pressed') },
     { uri: '../assets/images/baccarat.png', onPress: () => console.log('Image 2 pressed') },
@@ -48,7 +36,7 @@ const GameCenter = () => {
     <ScrollView style={{ flex: 1 }}>
        <Header
         logoSource={require('../assets/images/logo-casino-gaming.png')}
-        menuItems={menuItems}
+        menuItems={headerMenuItems}
       />
         <BigBanner
         title="Welcome to our game center!"
